@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DataBindingDemo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="ageFormat">%d years old</string>
+</resources>

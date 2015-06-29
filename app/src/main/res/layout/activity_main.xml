@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable name="person" type="com.android_montreal.databindingdemo.model.Person"/>
+    </data>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:orientation="vertical" android:padding="12dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/firstNameTextField"
+                  android:text="@{person.firstName}"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/lastNameTextField"
+                  android:text="@{person.lastName}"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="@{@string/ageFormat(person.age)}"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/ageTextField"
+                  android:text="@{person.age &lt; 45 ? `under 45` : `45 and over`}"/>
+
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:text="Age +1"
+            android:onClick="onButtonClick"/>
+
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Age -1"
+                android:onClick="onMinusButtonClick"/>
+
+    </LinearLayout>
+</layout>
